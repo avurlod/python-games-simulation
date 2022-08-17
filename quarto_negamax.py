@@ -1,4 +1,3 @@
-from cgi import print_arguments
 import numpy as np
 from quarto import utils as u
 from quarto.position import Position
