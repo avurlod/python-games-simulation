@@ -1,0 +1,13 @@
+REAL_GAME = False
+DEBUG = False
+
+if REAL_GAME:
+    NB_CARDS = 104
+    NB_CARDS_IN_HAND = 10
+    NB_OPPONENTS = 5
+    NB_PILES = 4
+else:
+    NB_CARDS_IN_HAND = 5
+    NB_OPPONENTS = 5
+    NB_PILES = 2
+    NB_CARDS = NB_PILES + (NB_OPPONENTS+1) * NB_CARDS_IN_HAND + 5
