@@ -1,0 +1,6 @@
+This is the write up of one of the talks I gave at Atlassian Design Week 2017. It’s an overview of my experience with Deep Work and my experiments with various rituals and habits geared towards getting the most out of the time I devote to work. It’s been working well for me both on the job and for personal projects outside of work. Most of the things I’ve been trying come from Cal Newport’s book, Deep Work: Rules for Focused Success in a Distracted World.
+
+The value of deep work
+Deep work is the valuable work, the work we get paid to do. It’s not email, or messaging, or meetings. It’s thinking work; it’s the kind of work you need to do to solve hard problems, to become a master at your craft, etc.
+
+We need time, space, and focus to do the deep, important work. In his book on the subject Deep Work, Cal Newport (who coined the term) describes deep work as “professional activities performed in a state of distraction-free concentration that push your cognitive capabilities to their limit. These efforts create new value, improve your skill, and are hard to replicate.”

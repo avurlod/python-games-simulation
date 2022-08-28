@@ -1,47 +1,61 @@
-from card import Card
-from pile import Pile
-from random import randint, shuffle
-from typing import Tuple, List
-from constants import *
-from utils import *
+from game import Game
+import statistics
+import matplotlib.pyplot as plt
 
-CardList = List[Card]
-PileList = List[Pile]
+from type.strategy import Strategy
 
-def display_state_of_game(cards, cards_in_my_hand, piles):
-    print('\nI can play', cards_in_my_hand)
-    for pile in piles: print(pile)
+SHOW_PROFILER = False
+NB_GAMES = 10
 
-def setup() -> Tuple[CardList, CardList, CardList]:
-    cards = list(Card(num) for num in range(1, NB_CARDS+1))
-    shuffle(cards)
-    cards_in_my_hand = list(cards.pop() for _ in range(NB_CARDS_IN_HAND))
-    piles = list(Pile(cards.pop()) for _ in range(NB_PILES))
+def plot_data(data: list, label: str):
+    plt.close()
+    plt.hist(data, bins=list(x/30 for x in range(31)), label=label)
 
-    cards.sort(key= getCardNum)
-    cards_in_my_hand.sort(key= getCardNum)
-    piles.sort(key = getPileNum)
+    plt.xlabel("% mon score / (mon score + score_adv moyen)")
+    plt.ylabel("Nombre de parties")
+    plt.legend()
+    plt.show()
 
-    return cards, cards_in_my_hand, piles
+def compute_games(nb_games: int, strategy: Strategy):
+    return [Game(strategy).end_metric() for _ in range(nb_games)]
 
-def play_one_turn(cards: CardList, cards_in_my_hand: CardList, piles: PileList):
-    cards_played_by_opponents = list(cards.pop(randint(0, len(cards)-1)) for _ in range(NB_OPPONENTS))
-    card_by_me = cards_in_my_hand.pop()
+def compute_strategy(strategy: Strategy):
+    data = compute_games(NB_GAMES, strategy)
+    mu = statistics.mean(data)
+    
+    # sigma = statistics.stdev(data)
+    # med = statistics.median(data)
 
-    cards_to_play = list(cards_played_by_opponents)
-    cards_to_play.append(card_by_me)
-    cards_to_play.sort(key=getCardNum)
-    print(f"I'll play {card_by_me}, within {cards_to_play}")
-    play_cards(cards_to_play, piles)
+    diff = (1-2*mu)*100
+    text = f"Avec la stratégie {strategy.name}, "
+    if diff < 0:
+        text += "l'adversaire est meilleur en moyenne : je fais {:.0f} points de plus que l'adv".format(-diff)
+    else:
+        text += "je suis meilleur en moyenne : je fais {:.0f} points de moins que l'adv".format(diff)
+    text += " sur une partie de 100 points"
+    print(text)
+    # label = "{:.2%} +/- {:.2%} (med = {:.2%})".format(mu, 3*sigma/sqrt(len(data)), med)
+    # print(label)
+    # plot_data(data, label)
+    
+def main():
+    for strategy in list(Strategy):
+        compute_strategy(strategy)
 
 
-def play():
-    cards, cards_in_my_hand, piles = setup()
+if SHOW_PROFILER:
+    if __name__ == '__main__':
+        import cProfile, pstats
+        profiler = cProfile.Profile()
+        profiler.enable()
+        main()
+        profiler.disable()
+        stats = pstats.Stats(profiler).sort_stats('tottime')
+        stats.print_stats(10)
+else:
+    main()
 
-    display_state_of_game(cards, cards_in_my_hand, piles)
-    for _ in range(NB_CARDS_IN_HAND):
-        play_one_turn(cards, cards_in_my_hand, piles)
-        display_state_of_game(cards, cards_in_my_hand, piles)
 
 
-play()
+# todo optimiser vitesse
+# todo implémenter CALCUL ESPERENCE BOUUUM

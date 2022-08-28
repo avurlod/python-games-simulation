@@ -51,36 +51,36 @@ class TestSum(unittest.TestCase):
         cards_available = [1, 4, 5, 7, 9, 10]
         n = len(cards_available)
         cards_on_top = [3, 6]
-        cards_in_my_hand = [2, 8]
-        self.assertListEqual(count_loosing_cards_multi_cards_multi_tops(cards_in_my_hand, cards_on_top, cards_available), [(2, [(-np.inf, n-1), (3, 0), (6, 0)]), (8, [(-np.inf, 0), (3, 0), (6, n-1)])])
+        my_cards = [2, 8]
+        self.assertListEqual(count_loosing_cards_multi_cards_multi_tops(my_cards, cards_on_top, cards_available), [(2, [(-np.inf, n-1), (3, 0), (6, 0)]), (8, [(-np.inf, 0), (3, 0), (6, n-1)])])
 
 
         cards_available = [1, 4, 5, 7, 9, 10]
         n = len(cards_available)
         cards_on_top = [2, 6]
-        cards_in_my_hand = [3, 8]
-        self.assertListEqual(count_loosing_cards_multi_cards_multi_tops(cards_in_my_hand, cards_on_top, cards_available), [(3, [(-np.inf, 0), (2, n), (6, 0)]), (8, [(-np.inf, 0), (2, 0), (6, n-1)])])
+        my_cards = [3, 8]
+        self.assertListEqual(count_loosing_cards_multi_cards_multi_tops(my_cards, cards_on_top, cards_available), [(3, [(-np.inf, 0), (2, n), (6, 0)]), (8, [(-np.inf, 0), (2, 0), (6, n-1)])])
 
 
         cards_available = [1, 4, 5, 7, 9, 10, 11, 12, 15, 19, 51, 52, 62]
         n = len(cards_available)
         cards_on_top = [6, 16, 27]
-        cards_in_my_hand = [14, 35]
-        self.assertListEqual(count_loosing_cards_multi_cards_multi_tops(cards_in_my_hand, cards_on_top, cards_available), [(14, [(-np.inf, 0), (6, n-5), (16, 0), (27, 0)]), (35, [(-np.inf, 0), (6, 0), (16, 0), (27, n)])])
+        my_cards = [14, 35]
+        self.assertListEqual(count_loosing_cards_multi_cards_multi_tops(my_cards, cards_on_top, cards_available), [(14, [(-np.inf, 0), (6, n-5), (16, 0), (27, 0)]), (35, [(-np.inf, 0), (6, 0), (16, 0), (27, n)])])
 
     def test_proba_loosing_cards_multi_cards_multi_tops(self):
         cards_available = [1, 4, 5, 7, 9, 10]
         n = len(cards_available)
         cards_on_top = [3, 6]
-        cards_in_my_hand = [2, 8]
-        self.assertListEqual(proba_loosing_cards_multi_cards_multi_tops(cards_in_my_hand, cards_on_top, cards_available), [(2, [(-np.inf, (n-1)/n), (3, 0), (6, 0)]), (8, [(-np.inf, 0), (3, 0), (6, (n-1)/n)])])
+        my_cards = [2, 8]
+        self.assertListEqual(proba_loosing_cards_multi_cards_multi_tops(my_cards, cards_on_top, cards_available), [(2, [(-np.inf, (n-1)/n), (3, 0), (6, 0)]), (8, [(-np.inf, 0), (3, 0), (6, (n-1)/n)])])
 
 
         cards_available = [1, 4, 5, 7, 9, 10, 11, 12, 15, 19, 51, 52, 62]
         n = len(cards_available)
         cards_on_top = [6, 16, 27]
-        cards_in_my_hand = [14, 35]
-        self.assertListEqual(proba_loosing_cards_multi_cards_multi_tops(cards_in_my_hand, cards_on_top, cards_available), [(14, [(-np.inf, 0), (6, (n-5)/n), (16, 0), (27, 0)]), (35, [(-np.inf, 0), (6, 0), (16, 0), (27, 1)])])
+        my_cards = [14, 35]
+        self.assertListEqual(proba_loosing_cards_multi_cards_multi_tops(my_cards, cards_on_top, cards_available), [(14, [(-np.inf, 0), (6, (n-5)/n), (16, 0), (27, 0)]), (35, [(-np.inf, 0), (6, 0), (16, 0), (27, 1)])])
 
 
 if __name__ == '__main__':

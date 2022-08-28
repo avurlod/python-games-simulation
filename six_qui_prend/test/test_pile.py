@@ -1,8 +1,8 @@
 import sys
-sys.path.append('six_qui_prend')
+sys.path.append('.')
 
-from pile import Pile
 from card import Card
+from pile import Pile
 import unittest
 
 

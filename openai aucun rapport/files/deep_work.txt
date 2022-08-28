@@ -1,0 +1,67 @@
+Deep Work: Experiments, tips and lessons learned
+This is the write up of one of the talks I gave at Atlassian Design Week 2017. It’s an overview of my experience with Deep Work and my experiments with various rituals and habits geared towards getting the most out of the time I devote to work. It’s been working well for me both on the job and for personal projects outside of work. Most of the things I’ve been trying come from Cal Newport’s book, Deep Work: Rules for Focused Success in a Distracted World.
+
+The value of deep work
+Deep work is the valuable work, the work we get paid to do. It’s not email, or messaging, or meetings. It’s thinking work; it’s the kind of work you need to do to solve hard problems, to become a master at your craft, etc.
+
+We need time, space, and focus to do the deep, important work. In his book on the subject Deep Work, Cal Newport (who coined the term) describes deep work as “professional activities performed in a state of distraction-free concentration that push your cognitive capabilities to their limit. These efforts create new value, improve your skill, and are hard to replicate.”
+
+
+In her book, Rapt: Attention and the Focused Life, Winifred Gallagher writes: “I’ll live the focused life, because it’s the best kind there is.” She explores the benefits of deep work and how it applies to life in general.
+
+The benefits of being able to focus on our work (or learning, or conversations, or play, etc.) extend well beyond professional life. And the benefits of deep work on our day-to-day work could be vast.
+
+Deep work is hard. It requires practice.
+In my talk and subsequent blog post about the growth mindset I talked about how to practice getting into a mode of learning. Specifically I talk about the values of deliberate practice.
+
+Related reading: Design with a growth mindset
+This is the write up of one of the talks I gave at Atlassian Design Week 2017. It’s an exploratory dive into the…
+medium.com
+
+To recap, deliberate practice is different from “regular” practice in that, well, it’s deliberate. In Anders Ericsson’s book Peak, he describes deliberate practice as stepping outside your comfort zone and pushing yourself beyond your current abilities.
+
+Practicing those things you’ve already mastered is not enough to help you get better. And simply wanting to improve isn’t sufficient either. You need well-defined goals and, ideally, the help of a mentor to help you plan, train, and give you actionable feedback.
+
+I think that’s pretty accurate. Essentially, the doing part is just that: doing. Practice what you want to learn in a deliberate way, pushing yourself and adjusting over time to focus where you need it.
+
+But doing isn’t that simple and that’s where the concept of deep work comes in.
+
+So, how might we get better at deep work? How might we begin to develop a practice around it? I have some ideas, and have been experimenting to find out. And it’s been working. I’m not sure I can give this enough emphasis, but here goes: shifting my work style to be one centered around deep work has had more benefits for my work and life than anything I’ve tinkered with in the past. And I’ve tinkered a lot.
+
+Here are a few things I’ve been doing that you might consider trying.
+
+First, schedule time for deep work.
+There are different ways you can go about scheduling deep work. Authors, for example, often go with a monastic approach, isolating themselves completely for long stretches on a regular basis. Others reserve specific blocks of time for deep work — a week or two a quarter, say — and leave the rest open for whatever comes along in their day to day. For many, however, these approaches aren’t practical.
+
+I’ve taken to doing a combination of a rhythmic and journalistic approach — I reserve specific times in the week for deep work and also try and snatch as much random free time as possible as it becomes available to me.
+
+And, yes, by block, I mean I block my calendar and work hard to protect those times.
+
+Because getting into a focused state is difficult — it’s far more challenging than it sounds — I’ve developed a practice and ritual around my deep work sessions.
+
+Step one — set up. I turn everything off. No email, no texts, etc. I also like to isolate myself if possible. It’s not impossible to get into this mode in an open office, but it’s harder. Some people have a set-up in a dark room facing a blank wall. I haven’t felt the need to do that, and the more I get into a focused state, the easier it is. This became especially true as I eliminated distractions from my life, but more on that in a bit.
+Step two — a short meditation and pep talk. I visualize my brain as a computer, and this part is me booting up. I spend a couple minutes breathing and letting go of distracting thoughts.
+Step three — I put on my headphones and cue up a session with brain.fm. There has been quite a bit of study on how music affects our thinking, and there are quite a few people who swear that ambient, rhythmic and repeated music lights up their brains. I can’t speak for anyone else, but I gave it a shot and absolutely love it.
+Step four — when I’m finished, I ease myself out of this focused state. I do a shutting down ritual where I picture my “computer” brain turning off as I step away from deep work mode. “Powering down…” Haha, it might sound cheesy, but it’s fun and seems to help me transition. I’ve also taken to doing this at the end of the work day.
+I think it’s worth repeating that deep work requires practice and that practice extends out of and beyond the deep work sessions. It turns out that all the distraction we suffer through builds up. The more distracted we are, the harder it is for us to get into a focus state. Newport describes this effort as “attention residue” and cites some compelling research that backs up the idea that multitasking and context switching destroy our ability to perform well.
+
+So I’ve also started experimenting with a few ways to increase my ability to focus outside of work, so that my ability to shift into a focused mode comes easier, lasts longer, and is more efficient.
+
+Tips to get better at deep work.
+YMMV (Your Milage May Vary) on these but here goes:
+
+Get comfortable with being focused. It’s hard to sit still and focus on something. It gets easier, but there comes a point where I want to be distracted — want some relief from the focus and intent — so I’ve been mindful in trying to build up a will to resist distracting myself. Auto-pilot is not a good look, so I try and avoid and break out of it whenever I find myself cruising.
+Speaking of mindfulness, meditation helps quite a bit. As I mentioned in my “boot up ritual” I’ve begun to work it into the practice itself, but I’ve also found that 10–15 minutes of meditation in the morning has a noticeable affect on my ability to focus throughout the day.
+Quit social media. This is a big one. I mostly ignored all social media for 30 days, and when I began to feel more focused and calm, and, frankly, happier, I kept it going. I don’t do Facebook or Twitter, and my social media is limited to a few check-ins and photo posts on Instagram now. I don’t scroll anymore, and I’m amazed looking back how much time was devoted to that in small chunks. It adds up quickly.
+Practice saying “no” to things and become a bit hard to reach. As part of building up a will to avoid distraction, I’ve also taken to being a bit ruthless with my time — which is harder than it sounds. I’m very much a “damned if you do, bored if you don’t” kind of person, so my usual inclination is to say yes to everything. I still try and be open to new experiences, and this isn’t really about that, but I no longer agree to participate in everything, and I politely ignore or refuse more requests for my time and attention. I’ve had to explain things a few times, but so far nobody has died or had any real problem with it. And I’ve got more time and energy to do things that I feel matter.
+Related reading: Is conflict killing your collaboration?
+Actually, aggressive agreement is already doing it for you.
+medium.com
+
+One last thing that has been a real challenge for me. When I’m done with work, work is done. I no longer do work of any kind when I’m not in work mode. And, awesomely, I don’t have to. Deep working has enabled me to get a lot more work done, done better, in much less time. I’m doing more than I was, but it’s easier, better and more fun — with the bonus of having more time and energy for other things.
+
+The bottom line for me is that deep work works, and it works well. Just last month I participated in Camp NanoWriMo and used deep work techniques to write a 70k word novel draft in 30 days. Something I would have never thought possible for me.
+
+I’m still learning, however, so if anyone reading this wants to chat, or has ideas or success stories around deep work, please give me a shout.
+
+Don’t forget to be awesome!

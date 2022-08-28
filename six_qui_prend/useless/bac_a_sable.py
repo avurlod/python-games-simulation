@@ -43,14 +43,14 @@ def proba_loosing_cards_one_card(x_0, c, cards_available):
     return count_loosing_cards(x_0, c, cards_available)/len(cards_available)
 
 # si j'ai 4 cartes dans la main, et qu'il y a un tas, quelle est la proba que je prenne pour chaque carte ?
-def proba_loosing_cards_multi_cards(cards_in_my_hand, c, cards_available):
-    return list((x_0, proba_loosing_cards_one_card(x_0, c, cards_available)) for x_0 in cards_in_my_hand)
+def proba_loosing_cards_multi_cards(my_cards, c, cards_available):
+    return list((x_0, proba_loosing_cards_one_card(x_0, c, cards_available)) for x_0 in my_cards)
 
 # si j'ai 4 cartes dans la main, et qu'il y a 3 tas c_1 c_2 c_3, pour chaque carte et chaque tas combien de cartes peuvent me sauver ?
-def count_loosing_cards_multi_cards_multi_tops(cards_in_my_hand, cards_on_top, cards_available):
+def count_loosing_cards_multi_cards_multi_tops(my_cards, cards_on_top, cards_available):
     l = []
     n = len(cards_available)
-    for x_0 in cards_in_my_hand:
+    for x_0 in my_cards:
         l_x_0 = []
 
         s = 0
@@ -97,19 +97,19 @@ def count_loosing_cards_multi_cards_multi_tops(cards_in_my_hand, cards_on_top, c
     return l
 
 # si j'ai 4 cartes dans la main, et qu'il y a 2 tas c_1 c_2, quelle est la proba que je prenne pour chaque carte ?
-def proba_loosing_cards_multi_cards_multi_tops(cards_in_my_hand, cards_on_top, cards_available):
-    l_count = count_loosing_cards_multi_cards_multi_tops(cards_in_my_hand, cards_on_top, cards_available)
+def proba_loosing_cards_multi_cards_multi_tops(my_cards, cards_on_top, cards_available):
+    l_count = count_loosing_cards_multi_cards_multi_tops(my_cards, cards_on_top, cards_available)
     l = []
     for x_0, l_x_0 in l_count:
         l.append((x_0, list((c_1, s/len(cards_available)) for c_1, s in l_x_0)))
     return l
 
-# TODO simuler une partie contre 1 adversaire
-# TODO structurer un tas pour connaître le poids
-# TODO calculer l'espérance de gain en jouant une carte
-# TODO élargir quand il y a + d'un seul adversaire qui joue
-# TODO simuler une partie à plusieurs joueurs
-# TODO élargir quand il y a + qu'une seule place avant de prendre le tas
+# TOD O simuler une partie contre 1 adversaire
+# TOD O structurer un tas pour connaître le poids
+# TOD O calculer l'espérance de gain en jouant une carte
+# TOD O élargir quand il y a + d'un seul adversaire qui joue
+# TOD O simuler une partie à plusieurs joueurs
+# TOD O élargir quand il y a + qu'une seule place avant de prendre le tas
 
 
 

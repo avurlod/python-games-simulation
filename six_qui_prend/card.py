@@ -28,3 +28,7 @@ class Card:
             self.value = self.__compute_value()
 
         return self.value 
+
+    def get_num(self) -> int:
+        return self.num if self.num_normalized is None else self.num_normalized
+

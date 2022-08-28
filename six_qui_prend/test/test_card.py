@@ -1,10 +1,8 @@
 import sys
+sys.path.append('.')
 
-# setting path
-sys.path.append('six_qui_prend')
-
-import unittest
 from card import Card
+import unittest
 
 class TestSum(unittest.TestCase):
     def test_get_value(self):
