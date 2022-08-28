@@ -2,7 +2,6 @@ class Card:
     def __init__(self, num: int):
         self.num = num
         self.value = None
-        self.num_normalized = None
 
     def __repr__(self): 
         return f"{self.num}"
@@ -28,7 +27,3 @@ class Card:
             self.value = self.__compute_value()
 
         return self.value 
-
-    def get_num(self) -> int:
-        return self.num if self.num_normalized is None else self.num_normalized
-

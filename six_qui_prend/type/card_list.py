@@ -9,6 +9,3 @@ class CardList(List[Card]):
 
     def sortByNum(self):
         self.sort(key=getCardNum)
-
-    def show_normalized_nums(self):
-        return ', '.join(list(str(card.num_normalized) for card in self))

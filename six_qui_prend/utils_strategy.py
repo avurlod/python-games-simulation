@@ -46,21 +46,6 @@ def fake_pile_with_O_on_top(piles: PileList):
     pile.size = NB_CARDS_MAX_FOR_PILE-1
     return pile
 
-def normalize_cards(cards: CardList, my_cards: CardList, piles: PileList):
-    all_cards = CardList()
-    for card in my_cards: insort(all_cards, card, key=getCardNum)
-    for card in cards: insort(all_cards, card, key=getCardNum)
-    for pile in piles: insort(all_cards, pile.card_on_top, key=getCardNum)
-
-    for card in all_cards: card.num_normalized = all_cards.index(card)+1
-    print('NORMALISATION')
-    print(cards)
-    print(my_cards)
-    print(piles.show_nums())
-    print(all_cards)
-    print(all_cards.show_normalized_nums())
-    return all_cards
-
 def eval_pile(pile: Pile):
     return pile.value + pile.nb_cards_to_put()
 
@@ -70,12 +55,10 @@ def find_best_card_by_evaluating_piles(cards: CardList, my_cards: CardList, pile
     total_combinaisons = binomial(nb_opponents, len(cards))
     fake_lowest_pile = fake_pile_with_O_on_top(piles)
     for card in my_cards:
-        #TODO faire la normalisation des cartes pour faire les calculs !!!!
         _, _, n_pile = find_interval(card, piles)
         if 1 == fake_lowest_pile.value and -1 == n_pile: return card
         pile = piles[n_pile] if n_pile != -1 else fake_lowest_pile
 
-        normalize_cards(cards, CardList([card]), piles)
         eval = eval_pile(pile) * count_combinations_pile_makes_me_loose_with_card(cards, card, pile, nb_opponents)
         print(f"{card} est perdant avec {eval}/{total_combinaisons} combinaison(s)")
 
@@ -93,10 +76,7 @@ def choose_card_index_wisely(cards: CardList, my_cards: CardList, piles: PileLis
     if Strategy.LAST == strategy:
         return -1
     if Strategy.COUNT_FARTHEST_FROM_DIRECT_TAKE == strategy:
-        # normalize_cards(cards, my_cards, piles)
-        i = my_cards.index(find_best_card_by_evaluating_piles(cards, my_cards, piles))
-        # normalize_cards(cards, my_cards, piles)
-        return i
+        return my_cards.index(find_best_card_by_evaluating_piles(cards, my_cards, piles))
 
 def choose_card_wisely(cards: CardList, my_cards: CardList, piles: PileList, strategy: Strategy) -> Card:
     return my_cards.pop(choose_card_index_wisely(cards, my_cards, piles, strategy))

@@ -12,6 +12,3 @@ class PileList(List[Pile]):
 
     def show_nums(self):
         return ', '.join(list(str(pile.card_on_top.num) for pile in self))
-
-    def show_normalized_nums(self):
-        return ', '.join(list(str(pile.card_on_top.num_normalized) for pile in self))
