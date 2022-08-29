@@ -62,5 +62,4 @@ else:
     main()
 
 
-
-# todo optimiser vitesse
+# todo choisi de manière maligne pour préparer le coup d'après qaund j'ai plusieurs cartes qui s'enchainent 
