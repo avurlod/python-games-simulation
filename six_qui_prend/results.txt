@@ -1,0 +1,6 @@
+Sur 1000 parties :
+
+  3   avec la stratégie RANDOM
+ 16   avec la stratégie LAST
+ -5   avec la stratégie FIRST
+ 21   avec la stratégie MINIMIZE_EXCEPTED_VALUE

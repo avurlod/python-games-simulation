@@ -1,11 +1,12 @@
+from constants import DEBUG
 from game import Game
 import statistics
 import matplotlib.pyplot as plt
 
 from type.strategy import Strategy
 
-SHOW_PROFILER = False
-NB_GAMES = 10
+SHOW_PROFILER = True
+NB_GAMES = 1000
 
 def plot_data(data: list, label: str):
     plt.close()
@@ -27,20 +28,23 @@ def compute_strategy(strategy: Strategy):
     # med = statistics.median(data)
 
     diff = (1-2*mu)*100
-    text = f"Avec la stratégie {strategy.name}, "
-    if diff < 0:
-        text += "l'adversaire est meilleur en moyenne : je fais {:.0f} points de plus que l'adv".format(-diff)
-    else:
-        text += "je suis meilleur en moyenne : je fais {:.0f} points de moins que l'adv".format(diff)
-    text += " sur une partie de 100 points"
+    text = "{:^5.0f} avec la stratégie {}".format(diff, strategy.name)
+    if DEBUG:
+        if diff < 0:
+            text += " -> l'adversaire est meilleur en moyenne : je fais {:.0f} points de plus que l'adv".format(-diff)
+        else:
+            text += " -> je suis meilleur en moyenne : je fais {:.0f} points de moins que l'adv".format(diff)
+        text += " sur une partie de 100 points"
     print(text)
     # label = "{:.2%} +/- {:.2%} (med = {:.2%})".format(mu, 3*sigma/sqrt(len(data)), med)
     # print(label)
     # plot_data(data, label)
     
 def main():
+    print(f"\nSur {NB_GAMES} parties :\n")
     for strategy in list(Strategy):
         compute_strategy(strategy)
+    print()
 
 
 if SHOW_PROFILER:
@@ -50,6 +54,8 @@ if SHOW_PROFILER:
         profiler.enable()
         main()
         profiler.disable()
+        stats = pstats.Stats(profiler).sort_stats('cumtime')
+        stats.print_stats(15)
         stats = pstats.Stats(profiler).sort_stats('tottime')
         stats.print_stats(10)
 else:
@@ -58,4 +64,3 @@ else:
 
 
 # todo optimiser vitesse
-# todo implémenter CALCUL ESPERENCE BOUUUM

@@ -1,7 +1,7 @@
 from card import Card
 from typing import List
 
-def getCardNum(card: Card): return card.get_num()
+def getCardNum(card: Card): return card.num
 
 class CardList(List[Card]):
     def __str__(self):

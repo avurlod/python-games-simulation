@@ -1,3 +1,4 @@
+from pickletools import read_uint1
 from constants import NB_OPPONENTS, NB_ROUNDS_BY_GAME
 from round import Round
 from score_list import ScoreList
@@ -21,10 +22,10 @@ class Game:
     def end_metric(self):
         self.play()
 
-        s_mine, s_opponents = 0, 0
-        for score in self.scores:
-            s_mine += score.mine
-            if NB_OPPONENTS > 0: s_opponents += score.opponents
+        s_mine = sum(score.mine for score in self.scores)
+        if 0 == NB_OPPONENTS: return s_mine
+
+        s_opponents = sum(score.opponents for score in self.scores)
 
         return s_mine/(s_mine + s_opponents/NB_OPPONENTS)
 
